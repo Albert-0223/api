@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ay.ayblog.dao.LabelMapper">
+  <resultMap id="BaseResultMap" type="com.ay.ayblog.pojo.Label">
+    <id column="LABEL_ID" jdbcType="INTEGER" property="labelId" />
+    <result column="ARTICLE_ID" jdbcType="INTEGER" property="articleId" />
+    <result column="LABEL_CONTENT" jdbcType="VARCHAR" property="labelContent" />
+    <result column="LABEL_STATUS" jdbcType="VARCHAR" property="labelStatus" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    LABEL_ID, ARTICLE_ID, LABEL_CONTENT, LABEL_STATUS
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from label
+    where LABEL_ID = #{labelId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from label
+    where LABEL_ID = #{labelId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="LABEL_ID" keyProperty="labelId" parameterType="com.ay.ayblog.pojo.Label" useGeneratedKeys="true">
+    insert into label (ARTICLE_ID, LABEL_CONTENT, LABEL_STATUS
+      )
+    values (#{articleId,jdbcType=INTEGER}, #{labelContent,jdbcType=VARCHAR}, #{labelStatus,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="LABEL_ID" keyProperty="labelId" parameterType="com.ay.ayblog.pojo.Label" useGeneratedKeys="true">
+    insert into label
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="articleId != null">
+        ARTICLE_ID,
+      </if>
+      <if test="labelContent != null">
+        LABEL_CONTENT,
+      </if>
+      <if test="labelStatus != null">
+        LABEL_STATUS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="articleId != null">
+        #{articleId,jdbcType=INTEGER},
+      </if>
+      <if test="labelContent != null">
+        #{labelContent,jdbcType=VARCHAR},
+      </if>
+      <if test="labelStatus != null">
+        #{labelStatus,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ay.ayblog.pojo.Label">
+    update label
+    <set>
+      <if test="articleId != null">
+        ARTICLE_ID = #{articleId,jdbcType=INTEGER},
+      </if>
+      <if test="labelContent != null">
+        LABEL_CONTENT = #{labelContent,jdbcType=VARCHAR},
+      </if>
+      <if test="labelStatus != null">
+        LABEL_STATUS = #{labelStatus,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where LABEL_ID = #{labelId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ay.ayblog.pojo.Label">
+    update label
+    set ARTICLE_ID = #{articleId,jdbcType=INTEGER},
+      LABEL_CONTENT = #{labelContent,jdbcType=VARCHAR},
+      LABEL_STATUS = #{labelStatus,jdbcType=VARCHAR}
+    where LABEL_ID = #{labelId,jdbcType=INTEGER}
+  </update>
+</mapper>

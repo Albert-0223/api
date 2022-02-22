@@ -1,0 +1,185 @@
+2022-02-12 12:56:50.094  WARN 18976 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1d13h26m28s318ms270µs700ns).
+2022-02-12 13:05:42.444  INFO 18976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-12 13:05:42.451  INFO 18976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-12 13:05:47.144  INFO 4232 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Starting AyBlogApplication using Java 1.8.0_311 on ALIENWARE with PID 4232 (A:\Project\ay-blog\target\classes started by 11793 in A:\Project\ay-blog)
+2022-02-12 13:05:47.145  INFO 4232 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : No active profile set, falling back to default profiles: default
+2022-02-12 13:05:47.190  INFO 4232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-12 13:05:47.190  INFO 4232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-12 13:05:48.253  INFO 4232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-12 13:05:48.260  INFO 4232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-12 13:05:48.261  INFO 4232 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-12 13:05:48.322  INFO 4232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-12 13:05:48.322  INFO 4232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1132 ms
+2022-02-12 13:05:49.038  INFO 4232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-12 13:05:49.161  INFO 4232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-12 13:05:49.364  INFO 4232 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Started AyBlogApplication in 2.592 seconds (JVM running for 3.476)
+2022-02-12 13:06:27.820  INFO 4232 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-12 13:06:27.821  INFO 4232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-12 13:06:27.822  INFO 4232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-12 13:06:27.875  INFO 4232 --- [http-nio-8080-exec-1] com.ay.ayblog.controller.UserController  : user is : User(userId=null, userName=albert, userPwd=123456, userStatus=null, userGender=null, userAge=null, userCtime=null, userEmail=null, userLastLogin=null)
+2022-02-12 13:06:27.882  INFO 4232 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-12 13:06:28.511  INFO 4232 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-12 13:06:28.593  INFO 4232 --- [http-nio-8080-exec-1] com.ay.ayblog.controller.UserController  : UserId : 8 insert successfully
+2022-02-12 13:32:41.039  INFO 3932 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Starting AyBlogApplication using Java 1.8.0_311 on ALIENWARE with PID 3932 (A:\Project\ay-blog\target\classes started by 11793 in A:\Project\ay-blog)
+2022-02-12 13:32:41.051  INFO 3932 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : No active profile set, falling back to default profiles: default
+2022-02-12 13:32:41.090  INFO 3932 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-12 13:32:41.100  INFO 3932 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-12 13:32:42.308  INFO 3932 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-12 13:32:42.315  INFO 3932 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-12 13:32:42.316  INFO 3932 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-12 13:32:42.376  INFO 3932 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-12 13:32:42.377  INFO 3932 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1277 ms
+2022-02-12 13:32:43.214  INFO 3932 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-12 13:32:43.389  INFO 3932 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-12 13:32:43.606  INFO 3932 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Started AyBlogApplication in 3.036 seconds (JVM running for 4.948)
+2022-02-12 15:24:32.754  INFO 2624 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Starting AyBlogApplication using Java 1.8.0_311 on ALIENWARE with PID 2624 (A:\Project\ay-blog\target\classes started by 11793 in A:\Project\ay-blog)
+2022-02-12 15:24:32.755  INFO 2624 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : No active profile set, falling back to default profiles: default
+2022-02-12 15:24:32.797  INFO 2624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-12 15:24:32.797  INFO 2624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-12 15:24:33.939  INFO 2624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-12 15:24:33.946  INFO 2624 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-12 15:24:33.946  INFO 2624 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-12 15:24:34.006  INFO 2624 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-12 15:24:34.006  INFO 2624 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1208 ms
+2022-02-12 15:24:34.754  INFO 2624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-12 15:24:34.883  INFO 2624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-12 15:24:35.082  INFO 2624 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Started AyBlogApplication in 2.78 seconds (JVM running for 4.597)
+2022-02-12 15:29:22.870  INFO 2624 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-12 15:29:22.870  INFO 2624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-12 15:29:22.871  INFO 2624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-12 15:48:09.579  INFO 8168 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Starting AyBlogApplication using Java 1.8.0_311 on ALIENWARE with PID 8168 (A:\Project\ay-blog\target\classes started by 11793 in A:\Project\ay-blog)
+2022-02-12 15:48:09.580  INFO 8168 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : No active profile set, falling back to default profiles: default
+2022-02-12 15:48:09.624  INFO 8168 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-12 15:48:09.624  INFO 8168 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-12 15:48:10.713  INFO 8168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-12 15:48:10.720  INFO 8168 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-12 15:48:10.720  INFO 8168 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-12 15:48:10.774  INFO 8168 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-12 15:48:10.775  INFO 8168 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1149 ms
+2022-02-12 15:48:11.430  INFO 8168 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-12 15:48:11.548  INFO 8168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-12 15:48:11.740  INFO 8168 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Started AyBlogApplication in 2.526 seconds (JVM running for 3.701)
+2022-02-12 15:51:07.077  INFO 8168 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-12 15:51:07.077  INFO 8168 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-12 15:51:07.078  INFO 8168 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-12 15:51:07.099  INFO 8168 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-12 15:51:07.824  INFO 8168 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-12 15:51:45.120  INFO 8168 --- [http-nio-8080-exec-3] com.ay.ayblog.controller.UserController  : userId : 30
+2022-02-12 15:51:45.120  INFO 8168 --- [http-nio-8080-exec-3] com.ay.ayblog.controller.UserController  : Start deleting user
+2022-02-12 15:51:45.124  INFO 8168 --- [http-nio-8080-exec-3] com.ay.ayblog.controller.UserController  : Delete user end
+2022-02-12 16:05:36.178  INFO 8168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-12 16:05:36.190  INFO 8168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-12 16:05:41.100  INFO 10244 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Starting AyBlogApplication using Java 1.8.0_311 on ALIENWARE with PID 10244 (A:\Project\ay-blog\target\classes started by 11793 in A:\Project\ay-blog)
+2022-02-12 16:05:41.101  INFO 10244 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : No active profile set, falling back to default profiles: default
+2022-02-12 16:05:41.144  INFO 10244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-12 16:05:41.144  INFO 10244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-12 16:05:42.209  INFO 10244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-12 16:05:42.216  INFO 10244 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-12 16:05:42.216  INFO 10244 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-12 16:05:42.273  INFO 10244 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-12 16:05:42.273  INFO 10244 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1128 ms
+2022-02-12 16:05:42.934  INFO 10244 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-12 16:05:43.058  INFO 10244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-12 16:05:43.259  INFO 10244 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Started AyBlogApplication in 2.529 seconds (JVM running for 3.664)
+2022-02-12 16:19:37.960  INFO 10244 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-12 16:19:37.960  INFO 10244 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-12 16:19:37.961  INFO 10244 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-12 16:19:37.994  INFO 10244 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-12 16:19:38.601  INFO 10244 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-12 16:20:31.862  INFO 10244 --- [http-nio-8080-exec-3] com.ay.ayblog.controller.UserController  : userId : 3
+2022-02-12 16:20:47.713  INFO 10244 --- [http-nio-8080-exec-4] com.ay.ayblog.controller.UserController  : userId : 4
+2022-02-12 16:22:33.301  INFO 10244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-12 16:22:33.317  INFO 10244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-12 16:22:38.104  INFO 10300 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Starting AyBlogApplication using Java 1.8.0_311 on ALIENWARE with PID 10300 (A:\Project\ay-blog\target\classes started by 11793 in A:\Project\ay-blog)
+2022-02-12 16:22:38.105  INFO 10300 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : No active profile set, falling back to default profiles: default
+2022-02-12 16:22:38.145  INFO 10300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-12 16:22:38.146  INFO 10300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-12 16:22:39.162  INFO 10300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-12 16:22:39.169  INFO 10300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-12 16:22:39.169  INFO 10300 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-12 16:22:39.222  INFO 10300 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-12 16:22:39.223  INFO 10300 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1077 ms
+2022-02-12 16:22:39.860  INFO 10300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-12 16:22:39.977  INFO 10300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-12 16:22:40.169  INFO 10300 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Started AyBlogApplication in 2.494 seconds (JVM running for 3.532)
+2022-02-12 16:22:47.713  INFO 10300 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-12 16:22:47.713  INFO 10300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-12 16:22:47.715  INFO 10300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-12 16:22:47.736  INFO 10300 --- [http-nio-8080-exec-1] com.ay.ayblog.controller.UserController  : userId : 4
+2022-02-12 16:22:47.742  INFO 10300 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-12 16:22:48.370  INFO 10300 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-12 16:23:51.544  WARN 10300 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Integer is not present]
+2022-02-12 16:24:00.456  INFO 10300 --- [http-nio-8080-exec-7] com.ay.ayblog.controller.UserController  : userIds : [4, 5]
+2022-02-12 16:25:50.916  INFO 10300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-12 16:25:50.929  INFO 10300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-12 16:25:55.741  INFO 12504 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Starting AyBlogApplication using Java 1.8.0_311 on ALIENWARE with PID 12504 (A:\Project\ay-blog\target\classes started by 11793 in A:\Project\ay-blog)
+2022-02-12 16:25:55.742  INFO 12504 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : No active profile set, falling back to default profiles: default
+2022-02-12 16:25:55.784  INFO 12504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-12 16:25:55.784  INFO 12504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-12 16:25:56.820  INFO 12504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-12 16:25:56.826  INFO 12504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-12 16:25:56.826  INFO 12504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-12 16:25:56.884  INFO 12504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-12 16:25:56.884  INFO 12504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1099 ms
+2022-02-12 16:25:57.548  INFO 12504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-12 16:25:57.672  INFO 12504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-12 16:25:57.870  INFO 12504 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Started AyBlogApplication in 2.524 seconds (JVM running for 3.646)
+2022-02-12 16:26:02.735  INFO 12504 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-12 16:26:02.735  INFO 12504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-12 16:26:02.736  INFO 12504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-12 16:26:02.756  INFO 12504 --- [http-nio-8080-exec-1] com.ay.ayblog.controller.UserController  : userIds : [4, 5]
+2022-02-12 16:26:02.763  INFO 12504 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-12 16:26:03.392  INFO 12504 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-12 16:26:06.469  INFO 12504 --- [http-nio-8080-exec-3] com.ay.ayblog.controller.UserController  : userId : 4
+2022-02-12 16:26:20.821  INFO 12504 --- [http-nio-8080-exec-5] com.ay.ayblog.controller.UserController  : userId : 7
+2022-02-12 16:27:56.074  INFO 12504 --- [http-nio-8080-exec-8] com.ay.ayblog.controller.UserController  : userName : albert4 , userPwd : 123456
+2022-02-12 16:27:56.088  INFO 12504 --- [http-nio-8080-exec-8] com.ay.ayblog.controller.UserController  : user : albert4 login successful
+2022-02-12 16:32:24.686  WARN 12504 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'user' for method parameter type User is not present]
+2022-02-12 16:34:15.588  WARN 12504 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'user' for method parameter type User is not present]
+2022-02-12 16:34:41.103  INFO 12504 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-12 16:34:41.162  INFO 12504 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-12 16:34:45.857  INFO 15052 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Starting AyBlogApplication using Java 1.8.0_311 on ALIENWARE with PID 15052 (A:\Project\ay-blog\target\classes started by 11793 in A:\Project\ay-blog)
+2022-02-12 16:34:45.858  INFO 15052 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : No active profile set, falling back to default profiles: default
+2022-02-12 16:34:45.908  INFO 15052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-12 16:34:45.908  INFO 15052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-12 16:34:46.946  INFO 15052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-12 16:34:46.953  INFO 15052 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-12 16:34:46.953  INFO 15052 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-12 16:34:47.012  INFO 15052 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-12 16:34:47.012  INFO 15052 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1104 ms
+2022-02-12 16:34:47.673  INFO 15052 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-12 16:34:47.789  INFO 15052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-12 16:34:47.989  INFO 15052 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Started AyBlogApplication in 2.529 seconds (JVM running for 3.708)
+2022-02-12 16:35:04.113  INFO 15052 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-12 16:35:04.113  INFO 15052 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-12 16:35:04.115  INFO 15052 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-12 16:35:04.157  INFO 15052 --- [http-nio-8080-exec-1] com.ay.ayblog.controller.UserController  : user is : User(userId=null, userName=albert123, userPwd=123456, userStatus=null, userGender=null, userAge=null, userCtime=null, userEmail=null, userLastLogin=null)
+2022-02-12 16:35:04.163  INFO 15052 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-12 16:35:04.788  INFO 15052 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-12 16:35:04.854  INFO 15052 --- [http-nio-8080-exec-1] com.ay.ayblog.controller.UserController  : UserId : 9 insert successfully
+2022-02-12 16:38:02.209  INFO 15052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-12 16:38:02.220  INFO 15052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-12 16:38:05.409  INFO 15580 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Starting AyBlogApplication using Java 1.8.0_311 on ALIENWARE with PID 15580 (A:\Project\ay-blog\target\classes started by 11793 in A:\Project\ay-blog)
+2022-02-12 16:38:05.410  INFO 15580 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : No active profile set, falling back to default profiles: default
+2022-02-12 16:38:05.448  INFO 15580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-12 16:38:05.448  INFO 15580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-12 16:38:06.499  INFO 15580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-12 16:38:06.506  INFO 15580 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-12 16:38:06.506  INFO 15580 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-12 16:38:06.562  INFO 15580 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-12 16:38:06.562  INFO 15580 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1113 ms
+2022-02-12 16:38:07.226  INFO 15580 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-12 16:38:07.351  INFO 15580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-12 16:38:07.555  INFO 15580 --- [restartedMain] com.ay.ayblog.AyBlogApplication          : Started AyBlogApplication in 2.588 seconds (JVM running for 3.688)
+2022-02-12 16:38:34.715  INFO 15580 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-12 16:38:34.715  INFO 15580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-12 16:38:34.716  INFO 15580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-12 16:38:49.450  INFO 15580 --- [http-nio-8080-exec-3] com.ay.ayblog.controller.UserController  : userId : 9
+2022-02-12 16:38:49.457  INFO 15580 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-12 16:38:50.131  INFO 15580 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-12 16:40:18.312  INFO 15580 --- [http-nio-8080-exec-7] com.ay.ayblog.controller.UserController  : userId : 7
+2022-02-12 16:40:18.312  INFO 15580 --- [http-nio-8080-exec-7] com.ay.ayblog.controller.UserController  : Start deleting user
+2022-02-12 16:40:18.318  INFO 15580 --- [http-nio-8080-exec-7] com.ay.ayblog.controller.UserController  : Delete user end
+2022-02-12 16:44:36.429  INFO 15580 --- [http-nio-8080-exec-1] com.ay.ayblog.controller.UserController  : userIds : [7, 8]
+2022-02-12 16:44:36.429  INFO 15580 --- [http-nio-8080-exec-1] com.ay.ayblog.controller.UserController  : Start deleting users
+2022-02-12 16:44:36.435  INFO 15580 --- [http-nio-8080-exec-1] com.ay.ayblog.controller.UserController  : Delete user end

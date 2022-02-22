@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ay.ayblog.dao.ArticleMapper">
+  <resultMap id="BaseResultMap" type="com.ay.ayblog.pojo.Article">
+    <id column="ARTICLE_ID" jdbcType="INTEGER" property="articleId" />
+    <result column="ARTICLE_TITTLE" jdbcType="VARCHAR" property="articleTittle" />
+    <result column="CATEGORY_ID" jdbcType="INTEGER" property="categoryId" />
+    <result column="ARTICLE_STATUS" jdbcType="VARCHAR" property="articleStatus" />
+    <result column="ARTICLE_CONTENT" jdbcType="VARCHAR" property="articleContent" />
+    <result column="ARTICLE_LIKE_COUNT" jdbcType="INTEGER" property="articleLikeCount" />
+    <result column="ARTICLE_COMMENT_COUNT" jdbcType="INTEGER" property="articleCommentCount" />
+    <result column="ARTICLE_VIEW_COUNT" jdbcType="INTEGER" property="articleViewCount" />
+    <result column="ARTICLE_MTIME" jdbcType="TIMESTAMP" property="articleMtime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ARTICLE_ID, ARTICLE_TITTLE, CATEGORY_ID, ARTICLE_STATUS, ARTICLE_CONTENT, ARTICLE_LIKE_COUNT, 
+    ARTICLE_COMMENT_COUNT, ARTICLE_VIEW_COUNT, ARTICLE_MTIME
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from article
+    where ARTICLE_ID = #{articleId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from article
+    where ARTICLE_ID = #{articleId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="ARTICLE_ID" keyProperty="articleId" parameterType="com.ay.ayblog.pojo.Article" useGeneratedKeys="true">
+    insert into article (ARTICLE_TITTLE, CATEGORY_ID, ARTICLE_STATUS, 
+      ARTICLE_CONTENT, ARTICLE_LIKE_COUNT, ARTICLE_COMMENT_COUNT, 
+      ARTICLE_VIEW_COUNT, ARTICLE_MTIME)
+    values (#{articleTittle,jdbcType=VARCHAR}, #{categoryId,jdbcType=INTEGER}, #{articleStatus,jdbcType=VARCHAR}, 
+      #{articleContent,jdbcType=VARCHAR}, #{articleLikeCount,jdbcType=INTEGER}, #{articleCommentCount,jdbcType=INTEGER}, 
+      #{articleViewCount,jdbcType=INTEGER}, #{articleMtime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="ARTICLE_ID" keyProperty="articleId" parameterType="com.ay.ayblog.pojo.Article" useGeneratedKeys="true">
+    insert into article
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="articleTittle != null">
+        ARTICLE_TITTLE,
+      </if>
+      <if test="categoryId != null">
+        CATEGORY_ID,
+      </if>
+      <if test="articleStatus != null">
+        ARTICLE_STATUS,
+      </if>
+      <if test="articleContent != null">
+        ARTICLE_CONTENT,
+      </if>
+      <if test="articleLikeCount != null">
+        ARTICLE_LIKE_COUNT,
+      </if>
+      <if test="articleCommentCount != null">
+        ARTICLE_COMMENT_COUNT,
+      </if>
+      <if test="articleViewCount != null">
+        ARTICLE_VIEW_COUNT,
+      </if>
+      <if test="articleMtime != null">
+        ARTICLE_MTIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="articleTittle != null">
+        #{articleTittle,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryId != null">
+        #{categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="articleStatus != null">
+        #{articleStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="articleContent != null">
+        #{articleContent,jdbcType=VARCHAR},
+      </if>
+      <if test="articleLikeCount != null">
+        #{articleLikeCount,jdbcType=INTEGER},
+      </if>
+      <if test="articleCommentCount != null">
+        #{articleCommentCount,jdbcType=INTEGER},
+      </if>
+      <if test="articleViewCount != null">
+        #{articleViewCount,jdbcType=INTEGER},
+      </if>
+      <if test="articleMtime != null">
+        #{articleMtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ay.ayblog.pojo.Article">
+    update article
+    <set>
+      <if test="articleTittle != null">
+        ARTICLE_TITTLE = #{articleTittle,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryId != null">
+        CATEGORY_ID = #{categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="articleStatus != null">
+        ARTICLE_STATUS = #{articleStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="articleContent != null">
+        ARTICLE_CONTENT = #{articleContent,jdbcType=VARCHAR},
+      </if>
+      <if test="articleLikeCount != null">
+        ARTICLE_LIKE_COUNT = #{articleLikeCount,jdbcType=INTEGER},
+      </if>
+      <if test="articleCommentCount != null">
+        ARTICLE_COMMENT_COUNT = #{articleCommentCount,jdbcType=INTEGER},
+      </if>
+      <if test="articleViewCount != null">
+        ARTICLE_VIEW_COUNT = #{articleViewCount,jdbcType=INTEGER},
+      </if>
+      <if test="articleMtime != null">
+        ARTICLE_MTIME = #{articleMtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ARTICLE_ID = #{articleId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ay.ayblog.pojo.Article">
+    update article
+    set ARTICLE_TITTLE = #{articleTittle,jdbcType=VARCHAR},
+      CATEGORY_ID = #{categoryId,jdbcType=INTEGER},
+      ARTICLE_STATUS = #{articleStatus,jdbcType=VARCHAR},
+      ARTICLE_CONTENT = #{articleContent,jdbcType=VARCHAR},
+      ARTICLE_LIKE_COUNT = #{articleLikeCount,jdbcType=INTEGER},
+      ARTICLE_COMMENT_COUNT = #{articleCommentCount,jdbcType=INTEGER},
+      ARTICLE_VIEW_COUNT = #{articleViewCount,jdbcType=INTEGER},
+      ARTICLE_MTIME = #{articleMtime,jdbcType=TIMESTAMP}
+    where ARTICLE_ID = #{articleId,jdbcType=INTEGER}
+  </update>
+</mapper>

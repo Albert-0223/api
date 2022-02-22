@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ay.ayblog.dao.CommentMapper">
+  <resultMap id="BaseResultMap" type="com.ay.ayblog.pojo.Comment">
+    <id column="COMMENT_ID" jdbcType="INTEGER" property="commentId" />
+    <result column="ARTICLE_ID" jdbcType="INTEGER" property="articleId" />
+    <result column="USER_ID" jdbcType="INTEGER" property="userId" />
+    <result column="COMMENT_CONTENT" jdbcType="VARCHAR" property="commentContent" />
+    <result column="COMMENT_LIKE_COUNT" jdbcType="INTEGER" property="commentLikeCount" />
+    <result column="COMMENT_VIEW_COUNT" jdbcType="INTEGER" property="commentViewCount" />
+    <result column="COMMENT_TIME" jdbcType="TIMESTAMP" property="commentTime" />
+    <result column="COMMENT_STATUS" jdbcType="VARCHAR" property="commentStatus" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    COMMENT_ID, ARTICLE_ID, USER_ID, COMMENT_CONTENT, COMMENT_LIKE_COUNT, COMMENT_VIEW_COUNT, 
+    COMMENT_TIME, COMMENT_STATUS
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from comment
+    where COMMENT_ID = #{commentId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from comment
+    where COMMENT_ID = #{commentId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="COMMENT_ID" keyProperty="commentId" parameterType="com.ay.ayblog.pojo.Comment" useGeneratedKeys="true">
+    insert into comment (ARTICLE_ID, USER_ID, COMMENT_CONTENT, 
+      COMMENT_LIKE_COUNT, COMMENT_VIEW_COUNT, COMMENT_TIME, 
+      COMMENT_STATUS)
+    values (#{articleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{commentContent,jdbcType=VARCHAR}, 
+      #{commentLikeCount,jdbcType=INTEGER}, #{commentViewCount,jdbcType=INTEGER}, #{commentTime,jdbcType=TIMESTAMP}, 
+      #{commentStatus,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="COMMENT_ID" keyProperty="commentId" parameterType="com.ay.ayblog.pojo.Comment" useGeneratedKeys="true">
+    insert into comment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="articleId != null">
+        ARTICLE_ID,
+      </if>
+      <if test="userId != null">
+        USER_ID,
+      </if>
+      <if test="commentContent != null">
+        COMMENT_CONTENT,
+      </if>
+      <if test="commentLikeCount != null">
+        COMMENT_LIKE_COUNT,
+      </if>
+      <if test="commentViewCount != null">
+        COMMENT_VIEW_COUNT,
+      </if>
+      <if test="commentTime != null">
+        COMMENT_TIME,
+      </if>
+      <if test="commentStatus != null">
+        COMMENT_STATUS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="articleId != null">
+        #{articleId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="commentContent != null">
+        #{commentContent,jdbcType=VARCHAR},
+      </if>
+      <if test="commentLikeCount != null">
+        #{commentLikeCount,jdbcType=INTEGER},
+      </if>
+      <if test="commentViewCount != null">
+        #{commentViewCount,jdbcType=INTEGER},
+      </if>
+      <if test="commentTime != null">
+        #{commentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="commentStatus != null">
+        #{commentStatus,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ay.ayblog.pojo.Comment">
+    update comment
+    <set>
+      <if test="articleId != null">
+        ARTICLE_ID = #{articleId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        USER_ID = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="commentContent != null">
+        COMMENT_CONTENT = #{commentContent,jdbcType=VARCHAR},
+      </if>
+      <if test="commentLikeCount != null">
+        COMMENT_LIKE_COUNT = #{commentLikeCount,jdbcType=INTEGER},
+      </if>
+      <if test="commentViewCount != null">
+        COMMENT_VIEW_COUNT = #{commentViewCount,jdbcType=INTEGER},
+      </if>
+      <if test="commentTime != null">
+        COMMENT_TIME = #{commentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="commentStatus != null">
+        COMMENT_STATUS = #{commentStatus,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where COMMENT_ID = #{commentId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ay.ayblog.pojo.Comment">
+    update comment
+    set ARTICLE_ID = #{articleId,jdbcType=INTEGER},
+      USER_ID = #{userId,jdbcType=INTEGER},
+      COMMENT_CONTENT = #{commentContent,jdbcType=VARCHAR},
+      COMMENT_LIKE_COUNT = #{commentLikeCount,jdbcType=INTEGER},
+      COMMENT_VIEW_COUNT = #{commentViewCount,jdbcType=INTEGER},
+      COMMENT_TIME = #{commentTime,jdbcType=TIMESTAMP},
+      COMMENT_STATUS = #{commentStatus,jdbcType=VARCHAR}
+    where COMMENT_ID = #{commentId,jdbcType=INTEGER}
+  </update>
+</mapper>
