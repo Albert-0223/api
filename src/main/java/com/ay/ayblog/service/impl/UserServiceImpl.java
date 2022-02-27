@@ -3,15 +3,14 @@ package com.ay.ayblog.service.impl;
 import com.ay.ayblog.dao.UserMapper;
 import com.ay.ayblog.pojo.User;
 import com.ay.ayblog.service.UserService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
 
-@Repository
 @Service
 @Transactional(rollbackFor = Exception.class)
 public class UserServiceImpl implements UserService {
@@ -21,7 +20,30 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void insert(User user) {
+        setUserBaseInfo(user);
         userMapper.insert(user);
+    }
+
+    public void setUserBaseInfo(User user) {
+        if (StringUtils.isEmpty(user.getUserGender())) {
+            user.setUserGender("M");
+        } else {
+            user.setUserGender(user.getUserGender());
+        }
+        if (StringUtils.isEmpty(user.getUserEmail())) {
+            user.setUserEmail("Initialize@mailbox.com");
+        } else {
+            user.setUserEmail(user.getUserEmail());
+        }
+        if (user.getUserAge() == null) {
+            user.setUserAge(0);
+        } else {
+            user.setUserAge(user.getUserAge());
+        }
+
+        user.setUserCtime(new Date());
+        user.setUserStatus("A");
+        user.setUserLastLogin(new Date());
     }
 
     @Override
@@ -37,7 +59,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional(readOnly = true)
     public User getUserByName(String userName) {
-        return userMapper.getUserbyName(userName);
+        return userMapper.getUserByName(userName);
     }
 
     @Override

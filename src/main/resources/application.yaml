@@ -20,8 +20,8 @@ mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
 
 logging:
-  file:
-    name: ay-blog.log
+  level:
+    com.ay.ayblog: debug
 
 springfox:
   documentation:

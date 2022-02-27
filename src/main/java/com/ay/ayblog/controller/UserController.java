@@ -58,16 +58,24 @@ public class UserController {
             result.setResultFailed("User already exists, userName is : " + user.getUserName());
             return result;
         }
-        setUserBaseInfo(user);
         userService.insert(user);
-        //Judge whether the user has successfully inserted into database
         User dbUser = userService.getUserById(user.getUserId());
-        if (dbUser == null) {
-            result.setResultFailed("Failed to insert user into database");
-            return result;
-        }
         result.setResultSuccess("User register successfully", user);
         log.info("UserId : {} insert successfully", user.getUserId());
+        return result;
+    }
+
+    @ApiOperation("找回密码")
+    @GetMapping("/forgotPwd")
+    public Result<Object> forgotPwd(@RequestParam("name") String userName) {
+        log.info("userName is {}", userName);
+        Result<Object> result = new Result<>();
+        User dbUser = userService.getUserByName(userName);
+        if (dbUser == null) {
+            result.setResultFailed("User does not exist");
+            return result;
+        }
+        result.setResultSuccess("Successfully matched to user", dbUser.getUserPwd());
         return result;
     }
 
@@ -217,35 +225,13 @@ public class UserController {
         return result;
     }
 
-    public void setUserBaseInfo(User user) {
-        if (StringUtils.isEmpty(user.getUserGender())) {
-            user.setUserGender("M");
-        } else {
-            user.setUserGender(user.getUserGender());
-        }
-        if (StringUtils.isEmpty(user.getUserEmail())) {
-            user.setUserEmail("Initialize@mailbox.com");
-        } else {
-            user.setUserEmail(user.getUserEmail());
-        }
-        if (user.getUserAge() == null) {
-            user.setUserAge(0);
-        } else {
-            user.setUserAge(user.getUserAge());
-        }
-
-        user.setUserCtime(new Date());
-        user.setUserStatus("A");
-        user.setUserLastLogin(new Date());
+    public boolean validateUserStatusIsD(Integer userId) {
+        User dbUser = userService.getUserById(userId);
+        return (StringUtils.equals(dbUser.getUserStatus(), "D"));
     }
 
     public boolean validateUserIsExist(String userName) {
         User dbUser = userService.getUserByName(userName);
         return dbUser != null;
-    }
-
-    public boolean validateUserStatusIsD(Integer userId) {
-        User dbUser = userService.getUserById(userId);
-        return (StringUtils.equals(dbUser.getUserStatus(), "D"));
     }
 }

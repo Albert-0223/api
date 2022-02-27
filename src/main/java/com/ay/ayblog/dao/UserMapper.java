@@ -35,7 +35,7 @@ public interface UserMapper {
      * @param Name
      * @return
      */
-    User getUserbyName(String Name);
+    User getUserByName(String Name);
 
     /**
      * @param user
